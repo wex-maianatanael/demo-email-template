@@ -1,6 +1,8 @@
 # demo-email-template
 Demonstration to test the localization feature and the integration of an email template for sending emails through the notification package.
 
+ℹ️ To test both cultures (en-US and pt-BR), change the browser language before sending a request to the API. It would be helpful to restart the browser after changing the language.
+
 ### Testing
 
 #### Swagger
