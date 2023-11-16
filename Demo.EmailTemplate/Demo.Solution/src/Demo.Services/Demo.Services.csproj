@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.25" />
+		<PackageReference Include="WEX.Edge.Core" Version="1.0.2" />
+		<PackageReference Include="WEX.Edge.Notification" Version="0.0.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Resources\EmailService.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>EmailService.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\EmailService.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>EmailService.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Templates\Emails\EmailTemplate.html">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
